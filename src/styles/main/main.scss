@@ -1,0 +1,131 @@
+$input-wwrapper-width: 686px;
+$search-button-width: 150px;
+.container {
+  background: #FAFAFA;
+}
+.input-wrapper {
+  width: $input-wwrapper-width;
+  padding-left: 15px;
+  margin: 0 auto;
+  border: 1px solid rgba(23, 23, 25, 0.2);
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  input  {
+    border: none;
+    outline: none;
+    width: 78%;
+    &:-webkit-autofill {
+      -webkit-text-fill-color: #000;
+      box-shadow: 0 0 0px 1000px #fff inset;
+    }
+  }
+  button {
+    width: $search-button-width;
+    font-family: 'Roboto';
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #1390E5;
+    border: none;
+    outline: none;
+    padding: 14px 0;
+  }
+  svg {
+    display: none;
+    margin-right: 16px;
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+}
+.visible-like {
+  display: inline-block !important;
+}
+.appearance-control {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+  margin: 40px 0 0;
+  img:first-child {
+    margin-right: 15px;
+  }
+  span span {
+    font-weight: bold;
+  }
+  small {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(23, 23, 25, 0.3);
+  }
+}
+.visible-controls {
+  display: flex;
+}
+.videos-block {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main {
+  padding: 0 200px;
+  h1 {
+    font-family: 'Roboto, sans-serif';
+    font-size: 36px;
+    line-height: 52px;
+    color: #000000;
+  }
+}
+.video {
+  &-item {
+    min-width: 305px;
+    width: 305px;
+    margin-bottom: 20px;
+    text-align-last: left;
+    div {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      align-items: center;
+      color: #000000;
+      margin-top: 8px;
+    }
+    span {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+      color: rgba(23, 23, 25, 0.3);
+      margin: 8px 0;
+      display: block;
+    }
+  }
+}
+.list-video-item {
+  display: flex;
+  width: 100%;
+  iframe {
+    margin-right: 20px;
+  }
+}
+.list-videos {
+  flex-direction: column;
+  width: 100%;
+}
+.searched-type-h1 {
+  font-size: 28px;
+  text-align: left;
+  margin-bottom: 12px;
+}
+.searched-type-input {
+  width: 100%;
+  margin: 0;
+  input {
+    width: 87%;
+  }
+}

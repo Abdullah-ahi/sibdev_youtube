@@ -1,0 +1,22 @@
+.favs-item {
+  padding: 13px 0 13px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-align-last: left;
+  background: #FFFFFF;
+  margin-bottom: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fav-btns button {
+  padding: 10px 25px;
+}
+/*# sourceMappingURL=favorites.css.map */

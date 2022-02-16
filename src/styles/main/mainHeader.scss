@@ -1,0 +1,14 @@
+.main-header {
+  display: flex;
+  padding: 0 200px;
+  justify-content: space-between;
+}
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+}
+.header-left a, .header-right span {
+  padding: 26px 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
