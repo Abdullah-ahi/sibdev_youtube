@@ -7,6 +7,7 @@
         @openForm="openForm"
         @handleGetVideos="handleGetVideos"
         @setText="setRequestText"
+        @keyDown="handleKeyDown"
       />
       <div
         class="appearance-control"
@@ -105,7 +106,7 @@ import Modal from './Modal.vue';
           }, []);
           this.saveVideos(videos);
         } catch(e){
-          console.log('Erroe', e);
+          console.log('Error', e);
         }
       },
       saveVideos(videos) {
@@ -122,6 +123,12 @@ import Modal from './Modal.vue';
       openForm() {
         this.$store.commit('setInputType', true);
         this.$root.layout = this.__Modal;
+      },
+      handleKeyDown(e) {
+        if (e.keyCode === 13) {
+          this.requestText = e.target.value;
+          this.handleGetVideos();
+        }
       }
     },
     computed: {

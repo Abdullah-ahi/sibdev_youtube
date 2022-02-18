@@ -3,7 +3,11 @@
     class="input-wrapper"
     :class="{'searched-type-input': visibleControls}"
   >
-    <input type="search" @change="$emit('setText', $event.target.value)">
+    <input
+      type="search"
+      @change="$emit('setText', $event.target.value)"
+      @keydown="$emit('keyDown', $event)"
+    >
     <div>
       <svg
         :class="{'visible-like': visibleControls}"

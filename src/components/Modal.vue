@@ -14,6 +14,12 @@
     <div class="modal-input-wrapper">
       <input type="text" placeholder="Укажите название" v-model="requestName">
     </div>
+    <small
+      class="error"
+      :class="{ 'visible-error': error }"
+    >
+      Введите название
+    </small>
     <span>Сортировать по</span>
     <div class="modal-input-wrapper">
       <select name="#" id="#" v-model="sortType">
@@ -47,6 +53,7 @@ export default {
     requestName: '',
     sortType: null,
     readOnly: null,
+    error: false,
   }),
   mounted() {
     this.request = this.$store.getters.request;
@@ -72,8 +79,9 @@ export default {
           this.editFavorite(favorite);
         }
         this.$root.layout = 'div';
+        this.error = false;
       } else {
-        console.log('Error');
+        this.error = true;
       }
     },
     addFavorite(favorite) {

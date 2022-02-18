@@ -14,5 +14,14 @@
 .fav-btns {
   button {
     padding: 10px 25px;
+    background-color: #1390E5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    &:first-child {
+      margin-right: 10px;
+    }
   }
 }
