@@ -4,6 +4,7 @@
       <h1 :class="{'searched-type-h1': visibleControls}">Поиск видео</h1>
       <SearchInput
         :visibleControls="visibleControls"
+        :inputValue="requestText"
         @openForm="openForm"
         @handleGetVideos="handleGetVideos"
         @setText="setRequestText"

@@ -7,6 +7,7 @@
       type="search"
       @change="$emit('setText', $event.target.value)"
       @keydown="$emit('keyDown', $event)"
+      :value="inputValue"
     >
     <div>
       <svg
@@ -31,6 +32,7 @@ export default {
   name: 'SearchInput',
   props: {
     visibleControls: { type: Boolean, required: true },
+    inputValue: { type: String, required: true },
   },
   methods: {
     openForm() {
